@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js">        
+    </script>
+    
+    <script>
+        axios.get("localhost:3000/consulta-cep/" + cep)
+            .then((cep) => {
+                console.log('cu preto')
+                const consultarCEP = () => {
+                    console.log('1')
+                    let cep = document.getElementById('cep')
+                    console.log(cep)
+                    return false
+                }
+            })
+            .catch((err) => {
+                console.log('buseta', err)
+            })
+    </script>
+    <!-- <style>
+        .botao-consulta {
+            
+        }
+
+        .div-consulta {
+
+        }
+
+        .div-mae-campos {}
+
+        .campos {}
+        
+        h1{
+            text-align: center;            
+        }
+    </style> -->
+    
+
+    <h1>Consulta CEP</h1>
+</head>
+
+<body>
+    <form action="" method="get">
+        <div>
+            <div>
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep"></input>
+            </div>
+            <div>
+                <button type="button" onclick="consultarCEP()"> Consultar CEP </button>
+            
+            </div>
+        </div>
+        <div style="display:flex;justify-content: center;">
+            <div>
+                <label for="logradouro">Nome da Rua:</label>
+                <input type="text" id="logradouro"></input>
+            </div>
+            <div>
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro"></input>
+            </div>
+            <div>
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento"></input>
+            </div>
+            <div>
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade"></input>
+            </div>
+            <div>
+                <label for="uf">UF</label>
+                <input type="text" id="uf"></input>             
+            </div>
+            <div>
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep"></input>
+            </div>
+        </div>
+
+    </form>
+
+</body>
+<footer>
+
+</footer>
+
+</html>
