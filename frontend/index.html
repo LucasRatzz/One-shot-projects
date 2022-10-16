@@ -16,7 +16,7 @@
                 console.log(cep)
                 axios.default.get("http://localhost:3000/consulta-cep/" + cep)
                     .then((cep) => {
-                        console.log('cu preto')
+                        console.log('test')
                         console.log(cep.data)
                         document.getElementById('bairro').value = cep.data.bairro
                         document.getElementById('logradouro').value = cep.data.logradouro
@@ -28,7 +28,7 @@
 
                     })
                     .catch((err) => {
-                        console.log('buseta', err)
+                        console.log('oohh não.....', err)
                     })
             }
 
