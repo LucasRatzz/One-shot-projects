@@ -9,6 +9,7 @@ const axios = require('axios').default;
 // Conseguir retornar endereço da resposta da API
 // Como é um retorno assíncrono precisamos usar uma promise
 // retornar de uma função o valor de uma promessa
+
 const consultarCEP = async (cep) => {
     const reqResult = await axios.get("https://viacep.com.br/ws/" + cep + "/json/")
     return reqResult.data
